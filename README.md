@@ -24,7 +24,9 @@ May have to allow people to filter the gender they are viewable to as this is no
 User Accounts
 Accounts will have age, gender, location, and activity (as well as skill or intensity level ie. tennis - beginner, intermediate, expert)
 Matches based on shared activities and location.
-Users will be able to view matches and post on their page if they would like to connect.
+Users will be able to view matches and post on the page of their match if they would like to connect.
+Users will be able to delete posts on their account.
+Users will be able to create, edit, and delete accounts.
 
 
 ## Implementation
@@ -49,14 +51,14 @@ There will be no external sources of data at this time.
 
 
 #### Home page
-![](PalominoHomePage-1.png)
+![](./images/PalominoHomePage-1.png)
 - Logo and welcome message
 - User login
 - Edit account page
 - Create account
 
 #### Create account Page
-![](PalominoCreateAccount-1.png)
+![](./images/PalominoCreateAccount-1.png)
 - user name
 - password
 - email
@@ -70,7 +72,7 @@ There will be no external sources of data at this time.
 - who account is viewable to/limit matches based on age and gender
 
 #### User page
-![](PalominoUserPage-1.png)
+![](./images/UpdatedPalominoUserPage.png)
 - display picture
 - activity list with option to add or remove activities
 - matches
@@ -78,10 +80,12 @@ There will be no external sources of data at this time.
 - edit account
 
 #### Edit user page
-![](PalominoEditProfilePage-1.png)
+![](./images/UpdatedPalominoEditProfilePage.png)
+- edit profile
+- delete profile option
 
 #### Match page
-![](PalominoMatchPage-1.png)
+![](./images/PalominoMatchPage-1.png)
 - display picture
 - shared activites
 - age, gender, rough distance
@@ -184,5 +188,6 @@ A live chat feature
 Emails that update users for new matches 
 Predictive text that autofills activities
 A search function for activities that shows how popular they are in your area
+Location Filter
 
 
