@@ -1,4 +1,7 @@
 import './App.scss';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import UserPage from "./Pages/UserPage/UserPage";
+import HomePage from "./Pages/HomePage/HomePage";
 
 function App() {
 
@@ -7,10 +10,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" to element={<HomePage />} />
-          <Route path="/UserPage" element={<UserPage />} /> 
-          <Route path="/MatchPage" element={<MatchPage />} /> 
-          <Route page="/EditProfilePage" element={<EditProfilePage />} />
-          <Route page="/CreateAccountPage" element={<CreateAccountPage />} />
+          <Route path="/user/:id" element={<UserPage />} /> 
+          {/* <Route path="/MatchPage" element={<MatchPage />} />  */}
+          {/* <Route page="/EditProfilePage" element={<EditProfilePage />} /> */}
+          {/* <Route page="/CreateAccountPage" element={<CreateAccountPage />} /> */}
         </Routes>
       </BrowserRouter>
     </>
