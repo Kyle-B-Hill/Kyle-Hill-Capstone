@@ -1,28 +1,35 @@
 import { useState, useEffect } from "react";
-import { getUsersEndpoint } from "../../Utils/api-utils"
+import { getUsersEndpoint, postUserLogin } from "../../Utils/api-utils"
+import { useParams } from "react-router-dom";
+
 import axios from "axios";
 import "./HomePage.scss";
 
 
 const HomePage = () => {
 
-    const [users, setUsers] = useState([]);
+    // const navigate = useNavigate();
+    // const { userId } = useParams();
+    // const [users, setUsers] = useState([]);
+    // const [selectedUser, setSelectedUser ] = useState([]);
 
-    const getUsers = async () => {
-        try {
-            let res = await axios.get(getUsersEndpoint());
-            setUsers(res.data)
-            console.log(res.data)
-        } catch (err) {
-            console.log("Users error", err);
-        }
-    }
+    // const getUsers = async () => {
+    //     try {
+    //         let res = await axios.get(getUsersEndpoint());
+    //         setUsers(res.data)
+    //         console.log(res.data)
+    //     } catch (err) {
+    //         console.log("Users error", err);
+    //     }
+    // }
 
-    useEffect(() => {
-        getUsers();
-    },[]);
+    // useEffect(() => {
+    //     getUsers();
+    // },[]);
 
-    const handleSubmit = (event) => {
+    // console.log("These should be users:", users);
+
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
         const form = event.target;
@@ -31,7 +38,24 @@ const HomePage = () => {
         if (!username || !password) {
             alert("You must fill out all fields");
             return;
+        };
+        try {
+            const userCredentials = await axios.post(postUserLogin(), {
+                user_name: username,
+                password: password
+            })
+            console.log(userCredentials.data[0].age);
+            localStorage.setItem("credentials", JSON.stringify(userCredentials.data[0]));
+            console.log(JSON.parse(localStorage.getItem("credentials")))
+        } catch (err) {
+            console.log("Error", err)
         }
+        
+        
+        
+        
+        // navigate("/UserPage")
+        
     }
 
 

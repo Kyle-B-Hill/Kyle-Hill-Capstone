@@ -10,7 +10,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" to element={<HomePage />} />
-          <Route path="/user/:id" element={<UserPage />} /> 
+          <Route path="/user" element={<UserPage />} /> 
           {/* <Route path="/MatchPage" element={<MatchPage />} />  */}
           {/* <Route page="/EditProfilePage" element={<EditProfilePage />} /> */}
           {/* <Route page="/CreateAccountPage" element={<CreateAccountPage />} /> */}

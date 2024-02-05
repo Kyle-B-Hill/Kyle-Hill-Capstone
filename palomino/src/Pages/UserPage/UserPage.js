@@ -1,37 +1,49 @@
 import "./UserPage.scss";
+import Footer from "../../Components/Footer/Footer"
 import { useEffect, useState } from "react";
-import axios from "axios";
-import logo from "../../Assets/logo/palomino-high-resolution-logo.png"
 import { getUserEndpoint } from "../../Utils/api-utils"
+import axios from "axios";
+
 
 const UserPage = () => {
+ 
+    const [user, setUser] = useState(null);
 
-    const [user, setUser] = useState([])
-
-    const getUser = async () => {
+    const getUser = async (id) => {
+        if (!id) {
+            return;
+        }
         try {
-            let res = await axios.get(getUserEndpoint(user.id));
+            let res = await axios.get(getUserEndpoint(id));
             setUser(res.data);
-
             console.log(res.data);
+            
         } catch (err) {
             console.log("Error", err);
         }
     }
     useEffect(() => {
-        getUser();
+        const userId = JSON.parse(localStorage.getItem("credentials")).id;
+        console.log(userId);
+        getUser(userId);
     }, []);
-
+    
+    if(user) {
+        console.log("This should be the selected user:", user.user_name)
+    }
     return (
         <>
-            <section className="user-page">
-                <div className="user-page__header">
-                    <button>Logout</button>
-                    <button>Edit Profile</button>
-                </div>
-                <div className="user-page__display-picture"></div>
-
-            </section>
+            {user && (
+                <section className="user-page">
+                    <div className="user-page__header">
+                        <button>Logout</button>
+                        <button>Edit Profile</button>
+                    </div>
+                    <p>Hello {user.user_name}</p>
+                    <div className="user-page__display-picture"></div>
+                < Footer />
+                </section>
+            )}
         </>
     )
 }
