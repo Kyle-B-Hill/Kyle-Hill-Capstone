@@ -2,6 +2,7 @@ import "./MatchPage.scss"
 import { useEffect, useState } from "react";
 import { getUserMatches } from "../../Utils/api-utils"
 import axios from "axios";
+import Footer from "../../Components/Footer/Footer";
 
 function MatchPage() {
 
@@ -47,6 +48,7 @@ function MatchPage() {
                     <p>This is the match page</p>
                     <p>Your match is {matches[currentMatch].user_name}</p>
                     <button onClick={incrementMatch}>Next</button>
+                < Footer />
                 </section>
             )}
         </>

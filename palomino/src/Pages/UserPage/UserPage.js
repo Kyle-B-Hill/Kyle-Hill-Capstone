@@ -1,13 +1,14 @@
 import "./UserPage.scss";
 import Footer from "../../Components/Footer/Footer"
 import { useEffect, useState } from "react";
-import { getUserEndpoint } from "../../Utils/api-utils"
+import { getUserEndpoint, getUserEnjoysEndpoint } from "../../Utils/api-utils"
 import axios from "axios";
 
 
 const UserPage = () => {
  
     const [user, setUser] = useState(null);
+    const [activities, setActivities] = useState(null);
 
     const getUser = async (id) => {
         if (!id) {
@@ -28,19 +29,36 @@ const UserPage = () => {
         getUser(userId);
     }, []);
     
-    // if(user) {
-    //     console.log("This should be the selected user:", user.user_name)
-    // }
+    const getActivities = async (id) => {
+        if (!id) {
+            return;
+        }
+        try {
+            let res = await axios.get(getUserEnjoysEndpoint(id))
+            setActivities(res.data);
+            console.log(res.data);
+        } catch (err) {
+            console.log("Error", err)
+        }
+    }
+
+    useEffect(() => {
+        const userId = JSON.parse(localStorage.getItem("credentials")).id;
+        console.log(userId);
+        getActivities(userId);
+    }, []);
+
+    console.log("These should be the activities:", activities);
+
     return (
         <>
-            {user && (
+            {activities && (
                 <section className="user-page">
-                    <div className="user-page__header">
-                        <button>Logout</button>
-                        <button>Edit Profile</button>
-                    </div>
                     <p>Hello {user.user_name}</p>
                     <div className="user-page__display-picture"></div>
+                    <p>First activity {activities[0].activity_name}</p>
+                    <p>Second activity {activities[1].activity_name}</p>
+                    <p>Third activity {activities[2].activity_name}</p>
                 < Footer />
                 </section>
             )}
