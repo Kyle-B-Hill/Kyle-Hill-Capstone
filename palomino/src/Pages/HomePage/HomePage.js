@@ -1,14 +1,12 @@
-import { useState, useEffect } from "react";
-import { getUsersEndpoint, postUserLogin } from "../../Utils/api-utils"
-import { useParams } from "react-router-dom";
-
+import { postUserLogin } from "../../Utils/api-utils"
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./HomePage.scss";
 
 
 const HomePage = () => {
 
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     // const { userId } = useParams();
     // const [users, setUsers] = useState([]);
     // const [selectedUser, setSelectedUser ] = useState([]);
@@ -47,15 +45,10 @@ const HomePage = () => {
             console.log(userCredentials.data[0].age);
             localStorage.setItem("credentials", JSON.stringify(userCredentials.data[0]));
             console.log(JSON.parse(localStorage.getItem("credentials")))
+            navigate("/user")
         } catch (err) {
             console.log("Error", err)
-        }
-        
-        
-        
-        
-        // navigate("/UserPage")
-        
+        }     
     }
 
 

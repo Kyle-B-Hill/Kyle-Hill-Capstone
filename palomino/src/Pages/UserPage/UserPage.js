@@ -28,9 +28,9 @@ const UserPage = () => {
         getUser(userId);
     }, []);
     
-    if(user) {
-        console.log("This should be the selected user:", user.user_name)
-    }
+    // if(user) {
+    //     console.log("This should be the selected user:", user.user_name)
+    // }
     return (
         <>
             {user && (

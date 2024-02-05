@@ -1,15 +1,14 @@
 import "./Footer.scss"
-import React from 'react'
+import { useNavigate } from "react-router-dom";
 
 
 
 function Footer() {
-    // add on click function, within that localStorage.removeItem("credentials")
-
+    const navigate = useNavigate();
     const logout = () => {
-        localStorage.removeItem("credentials")
-        console.log(localStorage)
-        // stick navigate in here as well
+        localStorage.removeItem("credentials");
+        console.log(localStorage);
+        navigate("/");
     }
   return (
 
