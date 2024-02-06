@@ -7,25 +7,6 @@ import "./HomePage.scss";
 const HomePage = () => {
 
     const navigate = useNavigate();
-    // const { userId } = useParams();
-    // const [users, setUsers] = useState([]);
-    // const [selectedUser, setSelectedUser ] = useState([]);
-
-    // const getUsers = async () => {
-    //     try {
-    //         let res = await axios.get(getUsersEndpoint());
-    //         setUsers(res.data)
-    //         console.log(res.data)
-    //     } catch (err) {
-    //         console.log("Users error", err);
-    //     }
-    // }
-
-    // useEffect(() => {
-    //     getUsers();
-    // },[]);
-
-    // console.log("These should be users:", users);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -62,30 +43,20 @@ const HomePage = () => {
             </div>
             <div className="home-page__form--container">
                 <form onSubmit={handleSubmit}>
-                    <label>
-                        Username: <input type="text" name="username"/>
-                    </label>
-                    <label>
-                        Password: <input type="password" name="password" />
-                    </label>
-                    <button>Log In</button>
+                    <p className="home-page__login">Log In</p>
+                    <div className="home-page__input-box">
+                        <label>                           
+                            <input type="text" name="username" placeholder="Username"/>
+                        </label>
+                    </div>
+                    <div className="home-page__input-box">
+                        <label>                        
+                            <input type="password" name="password" placeholder="Password"/>
+                        </label>
+                    </div>
+                    <button className="home-page__button-enter">Log In</button>
                 </form>
-            </div>
-            {/* <div className="home-page__card--container">
-                <div className="home-page__card--container">
-                    <a className="home-page__login">Log in</a>
-                    <div className="inputBox">
-                        <input type="text" required="required"/>
-                        <span className="user">Username</span>
-                    </div>
-                    <div className="inputBox">
-                        <input type="password" required="required"/>
-                        <span>Password</span>
-                    </div>
-                    <button className="enter">Enter</button>
-                </div>
-            </div> */}
-            
+            </div>          
         </section>
         </>
     )

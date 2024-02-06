@@ -75,11 +75,18 @@ const UserPage = () => {
         <>
             {activities && (
                 <section className="user-page">
-                    <p>Hello {user.user_name}</p>
                     <div className="user-page__display-picture"></div>
-                    <p onClick={findMatchesOneLink}>First activity {activities[0].activity_name}</p>
-                    <p onClick={findMatchesTwoLink}>Second activity {activities[1].activity_name}</p>
-                    <p onClick={findMatchesThreeLink}>Third activity {activities[2].activity_name}</p>
+                    <h2 className="user-page__welcome">Hello {user.user_name}!</h2>
+                    <div className="user-page__activities-container">
+                        <h3 className="user-page__activities-title">Your Currently Selected Activies</h3>
+                        <div className="user-page__activities-sub-container">
+                            <p className="user-page__activities" onClick={findMatchesOneLink}>{activities[0].activity_name}</p>
+                            <p className="user-page__activities" onClick={findMatchesTwoLink}>{activities[1].activity_name}</p>
+                            <p className="user-page__activities" onClick={findMatchesThreeLink}>{activities[2].activity_name}</p>
+                        </div>
+                        <h3 className="user-page__activities-subtitle">Click On An Activity Find New Palominos!</h3>
+                    </div>
+                    
                 < Footer />
                 </section>
             )}

@@ -1,6 +1,13 @@
 .footer {
     display: flex;
-    &__item {
-        width: 25%;
-    }
+    border-top: 2px solid #004051;
+}
+.footer__item {
+    padding: 0.4rem;
+    margin: 0.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    color: #32FD6B;
+    background-color: #004051;
+    border-radius: 15px;
 }

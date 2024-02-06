@@ -1,8 +1,43 @@
+.user-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1ad6dd;
+}
 .user-page__display-picture {
-    background-image: URL(../../Assets/logo/palomino-high-resolution-logo.png);
+    background-image: URL(../../assets/images/ted_lasso_photo.webp);
     background-position: bottom;
     background-size: cover;
-    height: 15vh;
+    height: 17vh;
     width: 70%;
     border-radius: 50%;
+    margin-top: 2rem;
+    border: 3px solid #004051;
+}
+.user-page__welcome {
+    color: #004051;
+}
+.user-page__activities-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.user-page__activities-title {
+    margin-top: 0.5rem;
+    color: #004051;
+}
+.user-page__activities-sub-container {
+    display: flex;
+}
+.user-page__activities {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    color: #32FD6B;
+    background-color: #004051;
+    border-radius: 25px;
+}
+.user-page__activities-subtitle {
+    color: #004051;
+    margin-top: 1rem;
 }

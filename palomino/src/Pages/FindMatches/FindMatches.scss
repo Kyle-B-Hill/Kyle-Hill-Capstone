@@ -1,0 +1,62 @@
+
+.findmatches-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1ad6dd;
+}
+.findmatches-page__display-picture {
+    // background-image: URL(../../assets/images/Dani_Rojas_29.webp);
+    background-position: top;
+    background-size: cover;
+    height: 17vh;
+    width: 70%;
+    border-radius: 50%;
+    margin-top: 2rem;
+    border: 3px solid #004051;
+}
+.findmatches-page__title {
+    margin-top: 2rem;
+    color: #004051;
+    text-align: center;
+    margin-bottom: 0rem;
+    line-height: 1.5rem;
+}
+.findmatches-page__info-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    border: 2px solid #004051;
+    margin: 0.5rem;
+    margin-top: 1rem;
+    background-color: #004051;
+    color: #32FD6B;
+    border-radius: 10px;
+}
+.findmatches-page__info-name {
+    margin: 0.5rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+.findmatches-page__info-info {
+    margin: 0.5rem;
+    text-align: center;
+}
+.findmatches-page__info-bio {
+    margin: 0.5rem;
+    text-align: center;
+}
+.findmatches-page__buton-container {
+    width: 94%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem;
+    margin-bottom: 1rem;
+}
+.findmatches-page__buton {
+    width: 25%;
+    background-color: #32FD6B;
+    border-radius: 15px;
+    padding: 0.25rem;
+}

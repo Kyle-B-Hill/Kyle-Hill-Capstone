@@ -86,34 +86,55 @@ const EditProfilePage = () => {
         <>
             {user && (
                 <section className="edit-page">
-                    <div className="edit-page__display--picture"></div>
-                    <form onSubmit={handleSubmit}>
-                        <label>
-                            Username: <input type="text" name="username" defaultValue={user.user_name} />
-                        </label>
-                        <label>
-                            City: <input type="text" name="city" defaultValue={user.city} />
-                        </label>
-                        <label>
-                            Password: <input type="password" name="password" defaultValue={user.password} />
-                        </label>
-                        <label>
-                            Confirm Password: <input type="password" name="confirmPassword" defaultValue={user.password} />
-                        </label>
-                        <label>
-                            Email: <input type="text" name="email" defaultValue={user.email} />
-                        </label>
-                        <label>
-                            Gender: <input type="text" name="gender" defaultValue={user.gender} />
-                        </label>
-                        <label>
-                            Bio: <input type="text" name="bio" defaultValue={user.bio} />
-                        </label>
-                        <label>
-                            Age: <input type="text" name="age" defaultValue={user.age} />
-                        </label>
-                        <button>Submit Changes</button>
-                    </form>
+                    <h1 className="edit-page__title">Edit Your Profile!</h1>
+                    <div className="edit-page__display-picture"></div>
+                    <div className="edit-page__form-container">
+                        <form onSubmit={handleSubmit}>
+                            <div className="edit-page__input-box">
+                                <label>
+                                    Username: <input type="text" name="username" defaultValue={user.user_name} />
+                                </label>
+                            </div>
+                            <div className="edit-page__input-box">
+                                <label>
+                                    City: <input type="text" name="city" defaultValue={user.city} />
+                                </label>
+                            </div>
+                            <div className="edit-page__input-box">
+                                <label>
+                                    Password: <input type="password" name="password" defaultValue={user.password} />
+                                </label>
+                            </div>
+                            <div className="edit-page__input-box">
+                                <label>
+                                    Confirm Password: <input type="password" name="confirmPassword" defaultValue={user.password} />
+                                </label>
+                            </div>
+                            <div className="edit-page__input-box">
+                                <label>
+                                    Email: <input type="text" name="email" defaultValue={user.email} />
+                                </label>
+                            </div>
+                            <div className="edit-page__input-box">
+                                <label>
+                                    Gender: <input type="text" name="gender" defaultValue={user.gender} />
+                                </label>
+                            </div>
+                            <div className="edit-page__input-box">
+                                <label>
+                                    Bio: <input type="text" name="bio" defaultValue={user.bio} />
+                                </label>
+                            </div>
+                            <div className="edit-page__input-box">
+                                <label>
+                                    Age: <input type="text" name="age" defaultValue={user.age} />
+                                </label>
+                            </div>
+                            <div className="edit-page__button-container">
+                                <button className="edit-page__button">Submit Changes</button>
+                            </div>
+                        </form>
+                    </div>
                 < Footer />
                 </section>
             )}

@@ -2,67 +2,70 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    // background-color: #97ffb5;
+    background-color: #1ad6dd;
 }
 .home-page__display--picture {
-    background-image: URL(../../Assets/logo/palomino-high-resolution-logo.png);
-    // background-repeat: no-repeat;
+    margin-top: 2rem;
+    background-image: URL(../../assets/logo/palomino-high-resolution-logo.png);
     background-position: bottom;
     background-size: cover;
-    height: 15vh;
+    height: 17vh;
     width: 70%;
     border-radius: 50%;
 }
 .home-page__login {
-    color: #000;
+    color: #32FD6B;
     text-transform: uppercase;
     letter-spacing: 2px;
     display: block;
     font-weight: bold;
-    font-size: x-large;
+    font-size: 1.25rem;
   }
   
-.home-page__card--container {
+.home-page__form--container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 350px;
-    width: 300px;
+    height: 250px;
+    width: 275px;
     flex-direction: column;
     gap: 35px;
-    background: #e3e3e3;
-    // box-shadow: 16px 16px 32px #c8c8c8,
-    //       -16px -16px 32px #fefefe;
+    background: #004051;
     border-radius: 8px;
+    margin-bottom: 1.406rem;
   }
   
-.inputBox {
+.home-page__input-box {
     position: relative;
     width: 250px;
   }
   
-.inputBox input {
+.home-page__input-box input {
     width: 100%;
+    color: #32FD6B;
     padding: 10px;
     outline: none;
     border: none;
-    color: #000;
     font-size: 1em;
     background: transparent;
-    border-left: 2px solid #000;
-    border-bottom: 2px solid #000;
-    transition: 0.1s;
+    border-left: 2px solid #32FD6B;
+    border-bottom: 2px solid #32FD6B;
     border-bottom-left-radius: 8px;
+    margin-bottom: 0.75rem;
   }
   
-.inputBox span {
+::placeholder {
+    color: #32FD6B;
+}
+
+.home-page__input-box span {
     margin-top: 5px;
     position: absolute;
     top: 0;
     left: 0;
-    transform: translateY(-4px);
     margin-left: 10px;
     padding: 10px;
-    pointer-events: none;
     font-size: 12px;
     color: #000;
     text-transform: uppercase;
@@ -71,38 +74,29 @@
     border-radius: 8px;
   }
   
-.inputBox input:valid~span,
-.inputBox input:focus~span {
-    transform: translateX(113px) translateY(-15px);
-    font-size: 0.8em;
-    padding: 5px 10px;
-    background: #000;
-    letter-spacing: 0.2em;
-    color: #fff;
-    border: 2px;
-  }
+
+
+
   
-.inputBox input:valid,
-.inputBox input:focus {
-    border: 2px solid #000;
-    border-radius: 8px;
-  }
-  
-.enter {
+.home-page__button-enter {
     height: 45px;
     width: 100px;
     border-radius: 5px;
-    border: 2px solid #000;
-    cursor: pointer;
+    border: 2px solid #32FD6B;
     background-color: transparent;
     transition: 0.5s;
     text-transform: uppercase;
     font-size: 10px;
     letter-spacing: 2px;
     margin-bottom: 1em;
+    color: #32FD6B;
   }
   
-.enter:hover {
-    background-color: rgb(0, 0, 0);
-    color: white;
-  }
+.home-page-welcome-message {
+  color: #004051;
+  text-align: center;
+}
+.home-page-welcome-slogan {
+  color: #004051;
+  text-align: center;
+}

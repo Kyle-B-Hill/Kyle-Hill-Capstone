@@ -1,9 +1,68 @@
-.edit-page__display--picture {
-    background-image: URL(../../Assets/logo/palomino-high-resolution-logo.png);
-    // background-repeat: no-repeat;
-    background-position: bottom;
+.edit-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1ad6dd;
+}
+.edit-page__title {
+    margin-top: 2rem;
+    color: #004051;
+    text-align: center;
+    margin-bottom: 0rem;
+}
+.edit-page__display-picture {
+    background-image: URL(../../assets/images/ted_lasso_photo.webp);
+    background-position: top;
     background-size: cover;
-    height: 15vh;
+    height: 17vh;
     width: 70%;
     border-radius: 50%;
+    margin-top: 2rem;
+    border: 3px solid #004051;
+}
+.edit-page__form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 275px;
+    flex-direction: column;
+    background: #004051;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+}
+.edit-page__input-box {
+    width: 250px;
+}
+      
+.edit-page__input-box input {
+    width: 100%;
+    color: #32FD6B;
+    padding: 10px;
+    outline: none;
+    border: none;
+    background: transparent;
+    border-left: 2px solid #32FD6B;
+    border-bottom: 2px solid #32FD6B;
+    border-bottom-left-radius: 8px;
+    margin-bottom: 0.75rem;
+    margin-top: 0.75rem;
+}
+label {
+    color: #32FD6B;
+}
+.edit-page__button-container {
+    width: 94%;
+    display: flex;
+    justify-content:center;
+    margin: 0.5rem;
+    margin-bottom: 0rem;
+}
+.edit-page__button {
+    width: 60%;
+    background-color: #32FD6B;
+    padding: 0.5rem;
+    border-radius: 15px;
 }
