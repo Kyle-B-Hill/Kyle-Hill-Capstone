@@ -39,7 +39,6 @@ MySql
 Express
 Axios
 Knex
-JWT
 
 ### APIs
 
@@ -163,11 +162,6 @@ Response:
     }
 ]
 
-
-### Auth
-
-- JWT auth for user account creation and login
-
 ## Roadmap
 
 - Create client
@@ -189,5 +183,6 @@ Emails that update users for new matches
 Predictive text that autofills activities
 A search function for activities that shows how popular they are in your area
 Location Filter
+JWT auth for user account creation and login
 
 
