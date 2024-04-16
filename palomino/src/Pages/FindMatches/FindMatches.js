@@ -12,7 +12,6 @@ const FindMatches = () => {
     const [loadMatches, setLoadMatches] = useState(null)
     const [currentMatch, setCurrentMatch] = useState(1)
 
-    console.log(Activity);
 
     const getLoadMatches = async (Activity) => {
         try {

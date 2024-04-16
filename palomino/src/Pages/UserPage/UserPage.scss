@@ -12,7 +12,9 @@
     width: 70%;
     border-radius: 50%;
     margin-top: 2rem;
-    border: 3px solid #004051;
+    // added new - changed border
+    // border: 3px solid #004051;
+    border: 2px solid #32FD6B;
 }
 .user-page__welcome {
     color: #004051;
@@ -36,6 +38,8 @@
     color: #32FD6B;
     background-color: #004051;
     border-radius: 25px;
+    // added new
+    border: 2px solid #32FD6B;
 }
 .user-page__activities-subtitle {
     color: #004051;

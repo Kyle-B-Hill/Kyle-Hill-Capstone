@@ -54,7 +54,11 @@ const HomePage = () => {
                             <input type="password" name="password" placeholder="Password"/>
                         </label>
                     </div>
-                    <button className="home-page__button-enter">Log In</button>
+                    
+                    <div className="home-page__button-container">
+                        <button className="home-page__button-enter">Log In</button>
+                        <button className="home-page__button-create">Create Account</button>
+                    </div>
                 </form>
             </div>          
         </section>

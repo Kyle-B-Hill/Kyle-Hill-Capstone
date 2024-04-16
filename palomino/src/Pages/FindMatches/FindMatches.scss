@@ -13,7 +13,9 @@
     width: 70%;
     border-radius: 50%;
     margin-top: 2rem;
-    border: 3px solid #004051;
+    // added new - changed border
+    // border: 3px solid #004051;
+    border: 2px solid #32FD6B;
 }
 .findmatches-page__title {
     margin-top: 2rem;
@@ -33,6 +35,8 @@
     background-color: #004051;
     color: #32FD6B;
     border-radius: 10px;
+    // added new
+    border: 2px solid #32FD6B;
 }
 .findmatches-page__info-name {
     margin: 0.5rem;
